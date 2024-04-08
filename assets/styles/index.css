@@ -1,0 +1,571 @@
+@font-face {
+  font-family: "Vietnam";
+  src: url(../fonts/BeVietnamPro-Regular.ttf);
+}
+* {
+  font-family: Vietnam, serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 25px;
+  margin: 25px 0;
+  color: hsl(227, 12%, 61%);
+}
+
+header,
+main,
+.footer-container1 {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.btn-style, main .Number, .btn1, .btn {
+  padding: 12px 27px;
+  border-radius: 50px;
+  background-color: hsl(12, 88%, 59%);
+  border: none;
+}
+
+.btn {
+  cursor: pointer;
+  box-shadow: -1px 8px 20px hsl(12, 77.91%, 72.16%);
+}
+.btn:hover {
+  background-color: hsl(12, 77.91%, 72.16%);
+}
+
+.btn1 {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.btn,
+.btn {
+  color: hsl(13, 100%, 96%);
+}
+
+.btn1 {
+  color: hsl(12, 88%, 59%);
+  font-weight: 600;
+}
+.btn1:hover {
+  color: hsl(12, 77.91%, 72.16%);
+}
+
+#absolute1 {
+  z-index: -1;
+  position: absolute;
+  height: 700px;
+  width: 701px;
+  top: -11%;
+  left: 64%;
+}
+
+#absolute2 {
+  z-index: -1;
+  position: absolute;
+  height: 615px;
+  width: 615px;
+  top: 117%;
+  left: -26%;
+}
+
+section .section2-container::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  background: url(../images/bg-tablet-pattern.svg) center/cover;
+  filter: brightness(0) saturate(100%) invert(52%) sepia(81%) saturate(2136%) hue-rotate(333deg) brightness(100%) contrast(91%);
+  height: 375px;
+  width: 500px;
+  z-index: 3;
+}
+
+section .section2-container::after {
+  content: "";
+  position: absolute;
+  width: 253px;
+  height: 144px;
+  background-color: rgb(243, 106, 72);
+  border-top-left-radius: 152px;
+  border-top-right-radius: 80px;
+  border: 10px solid rgb(243, 106, 72);
+  top: 0%;
+  left: 88%;
+  transform: rotateX(178deg);
+  z-index: 1;
+}
+
+header {
+  padding: 30px 0;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 35%;
+  min-width: 403px;
+}
+header nav li a {
+  color: hsl(233, 12%, 13%);
+}
+header nav li a:hover {
+  color: hsl(227, 12%, 61%);
+}
+header #hamburger {
+  display: none;
+}
+header .NavUl {
+  display: block;
+  background-color: hsl(13, 100%, 96%);
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 1s ease-in;
+  text-align: center;
+  padding: 44px;
+  width: 95%;
+}
+header .NavLi {
+  padding: 10px;
+}
+header .Header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: start;
+  max-height: 550px;
+  margin: 75px 0 60px 0;
+  align-items: center;
+}
+header .header-1 {
+  width: 50%;
+}
+header .header-1 h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  font-family: Vietnam, serif;
+}
+header .header-1 p {
+  font-size: 1.2rem;
+  line-height: 25px;
+  margin: 25px 0;
+}
+header .header-2 {
+  width: 50%;
+}
+header .header-2 img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1400px) {
+  header,
+  main,
+  section .section2-container,
+  .footer-container1 {
+    width: 80% !important;
+  }
+  header .header-1 p br {
+    display: none;
+  }
+}
+@media screen and (max-width: 1150px) {
+  header,
+  main,
+  section .section2-container,
+  .footer-container1 {
+    width: 90% !important;
+  }
+  header .header-1 h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 894px) {
+  header .header-1 h1 {
+    font-size: 2.2rem;
+  }
+  header,
+  main,
+  section .section2-container,
+  .footer-container1 {
+    width: 95% !important;
+  }
+  header button {
+    display: none;
+  }
+  header nav ul {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 650px) {
+  header nav ul,
+  header button,
+  header p br {
+    display: none;
+  }
+  header #hamburger {
+    display: block;
+  }
+  header nav ul,
+  header button,
+  header p br {
+    display: none;
+  }
+  header #hamburger {
+    display: block;
+  }
+  header .Header-container {
+    flex-direction: column-reverse;
+    max-height: none;
+    margin: 75px 0 25px 0;
+  }
+  header .header-1,
+  header .header-2 {
+    width: 95%;
+    text-align: center;
+  }
+}
+main .main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: start;
+}
+main .main-1 {
+  width: 50%;
+}
+main .main-1 h2 {
+  font-size: 3rem;
+}
+main .main-2 {
+  width: 50%;
+}
+main .between1,
+main .between2,
+main .between3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 19px;
+  margin-left: -88px;
+  width: 100%;
+  min-width: 331px;
+  max-width: 371px;
+}
+main .between2 {
+  max-width: 331px;
+  min-width: 296px;
+}
+main .between3 {
+  max-width: 355px;
+}
+main .flex {
+  margin-left: 25%;
+  align-items: center;
+}
+main .Number {
+  color: white;
+}
+
+@media screen and (max-width: 1800px) {
+  p {
+    font-size: 1rem;
+  }
+  main .main-1 h2 {
+    font-size: 2.6rem;
+  }
+  .flex p br {
+    display: none;
+  }
+}
+@media screen and (max-width: 1075px) {
+  main .main-1 h2 {
+    font-size: 2rem;
+  }
+  main .flex,
+  main .between1,
+  main .between2,
+  main .between3 {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 750px) {
+  main .main-container {
+    display: block;
+    margin: 0 auto;
+  }
+  main .main-1 {
+    text-align: center;
+  }
+  main .main-1,
+  main .main-2 {
+    width: 100%;
+  }
+  main .between1,
+  main .between2,
+  main .between3 {
+    background: antiquewhite;
+    text-align: left;
+    max-width: none;
+  }
+  main .between1,
+  main .between2,
+  main .between3 {
+    justify-content: left;
+  }
+}
+section {
+  position: relative;
+}
+section h4 {
+  text-align: center;
+  font-size: 3rem;
+}
+section .section1-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 91px 0;
+  gap: 30px;
+}
+section .People {
+  background-color: rgba(243, 243, 243, 0.86);
+  padding: 50px 70px;
+  text-align: center;
+  position: relative;
+}
+section .People img {
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  z-index: 2;
+}
+section h5 {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+section .slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0 35px 0;
+}
+section .trier {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 92px;
+}
+section .circle1 {
+  display: none;
+  height: 12px;
+  width: 12px;
+  border: 2px solid hsl(12, 88%, 59%);
+  background: transparent;
+  border-radius: 36px;
+}
+section .CircleStyle {
+  background-color: red;
+}
+section .btn {
+  margin: 0 auto;
+  display: flex;
+  padding: 20px 70px;
+}
+section .bg-orange {
+  background-color: hsl(12, 88%, 59%);
+  padding: 53px 0px;
+  display: flex;
+  margin-top: 50px;
+  position: relative;
+}
+section .section2-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+}
+section .section2-container h6 {
+  font-size: 2.5rem;
+  color: hsl(0, 0%, 98%);
+  z-index: 3;
+}
+section .section2-container button {
+  padding: 15px 45px;
+  z-index: 2;
+}
+@media screen and (max-width: 1800px) {
+  section .People p br {
+    display: none;
+  }
+}
+@media screen and (max-width: 1123px) {
+  section .People {
+    padding: 50px 24px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  section .section1-container {
+    margin: 150px 0 0 0;
+  }
+  section .circle1 {
+    display: block;
+  }
+}
+@media screen and (max-width: 750px) {
+  section .section1-container {
+    margin: 80px auto 15px;
+    width: 80%;
+  }
+  section .section1-container .People:nth-child(1),
+  section .section1-container .People:nth-child(3),
+  section .section2-container::before {
+    display: none;
+  }
+  section h4 {
+    font-size: 2rem;
+  }
+  section .section2-container {
+    display: block;
+    text-align: center;
+  }
+  section .section2-container h6 {
+    margin-bottom: 17px;
+    position: relative;
+    font-size: 2.2rem;
+  }
+  section .section2-container::after {
+    transform: rotate(111deg);
+    left: -143px;
+    top: 26%;
+  }
+}
+footer {
+  background-color: hsl(228, 39%, 23%);
+  font-family: Vietnam, serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  position: relative;
+  z-index: 3;
+}
+footer .footer-container1 {
+  display: grid;
+  grid-template-columns: 25% 40% 25%;
+  color: hsl(0, 0%, 98%);
+}
+footer .footer-container1 #logo2 {
+  width: 140px;
+  background: WHITE;
+  margin-top: 16px;
+}
+footer .flex1 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+footer .flex1 ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  min-width: 50px;
+}
+footer .flex1 li:hover {
+  filter: brightness(0) saturate(100%) invert(66%) sepia(63%) saturate(6220%) hue-rotate(339deg) brightness(99%) contrast(92%);
+  transition: 0.2s;
+}
+footer .flex2-container {
+  display: flex;
+  justify-content: space-around;
+}
+footer .flex2 li {
+  padding: 10px 0;
+}
+footer .flex2 li:hover {
+  color: hsl(12, 88%, 59%);
+  cursor: pointer;
+  transition: 0.2s;
+}
+footer .flex3 {
+  display: FLEX;
+  flex-direction: COLUMN;
+  justify-content: SPACE-BETWEEN;
+}
+footer .flex3 #flex3-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+footer .flex3 input {
+  min-width: 100px;
+  border-radius: 20px;
+  height: 40px;
+  width: 220px;
+  padding: 10px;
+  outline: none;
+}
+footer .flex3 span {
+  font-size: 0.7rem;
+  text-align: right;
+}
+
+@media screen and (max-width: 1100px) {
+  footer .footer-container1 {
+    grid-template-columns: 18% 38% 36%;
+  }
+}
+@media screen and (max-width: 1100px) and (max-width: 650px) {
+  footer .footer-container1 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  FOOTER .flex1 {
+    flex-direction: COLUMN-REVERSE;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .flex3,
+  .flex1 ul,
+  .flex1 img {
+    margin: 16px auto;
+  }
+  footer .flex3 span {
+    display: none;
+  }
+  footer button {
+    display: block;
+  }
+}/*# sourceMappingURL=index.css.map */

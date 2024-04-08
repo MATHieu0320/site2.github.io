@@ -1,0 +1,133 @@
+header {
+  padding: 30px 0;
+
+  nav {
+    @include Spacebetween;
+
+    ul {
+      @include Spacebetween;
+      width: 35%;
+      min-width: 403px;
+    }
+    li a {
+      color: $Very-Dark-Blue;
+      &:hover {
+        color: $Dark-Grayish-Blue;
+      }
+    }
+  }
+  #hamburger {
+    display: none;
+  }
+  .NavUl {
+    display: block;
+    background-color: $Very-Pale-Red;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 1s ease-in;
+    text-align: center;
+    padding: 44px;
+    width: 95%;
+  }
+  .NavLi {
+    padding: 10px;
+  }
+  .Header-container {
+    @include Spacebetween;
+    align-items: start;
+    max-height: 550px;
+    margin: 75px 0 60px 0;
+    align-items: center;
+  }
+  .header-1 {
+    width: 50%;
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      font-family: $font1;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 25px;
+      margin: 25px 0;
+    }
+  }
+  .header-2 {
+    width: 50%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+@media screen and (max-width: 1400px) {
+  header,
+  main,
+  section .section2-container,
+  .footer-container1 {
+    width: 80% !important;
+  }
+  header .header-1 p br {
+    display: none;
+  }
+}
+@media screen and (max-width: 1150px) {
+  header,
+  main,
+  section .section2-container,
+  .footer-container1 {
+    width: 90% !important;
+  }
+
+  header .header-1 h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 894px) {
+  header .header-1 h1 {
+    font-size: 2.2rem;
+  }
+  header,
+  main,
+  section .section2-container,
+  .footer-container1 {
+    width: 95% !important;
+  }
+  header button {
+    display: none;
+  }
+  header nav ul {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  header nav ul,
+  header button,
+  header p br {
+    display: none;
+  }
+  header #hamburger {
+    display: block;
+  }
+  header nav ul,
+  header button,
+  header p br {
+    display: none;
+  }
+  header #hamburger {
+    display: block;
+  }
+  header .Header-container {
+    flex-direction: column-reverse;
+    max-height: none;
+    margin: 75px 0 25px 0;
+  }
+  header .header-1,
+  header .header-2 {
+    width: 95%;
+    text-align: center;
+  }
+}

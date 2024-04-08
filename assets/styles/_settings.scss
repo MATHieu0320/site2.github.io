@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "Vietnam";
+  src: url(../fonts/BeVietnamPro-Regular.ttf);
+}
+
+$font1: Vietnam, serif;
+
+// primaireeeeeeeeeeeee
+
+$Bright-red: hsl(12, 88%, 59%);
+$Dark-Blue: hsl(228, 39%, 23%);
+
+///second
+
+$Dark-Grayish-Blue: hsl(227, 12%, 61%);
+$Very-Dark-Blue: hsl(233, 12%, 13%);
+$Very-Pale-Red: hsl(13, 100%, 96%);
+$Very-Light-Gray: hsl(0, 0%, 98%);
+
+@mixin Spacebetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+* {
+  font-family: $font1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+p {
+  font-size: 1rem;
+  line-height: 25px;
+  margin: 25px 0;
+  color: $Dark-Grayish-Blue;
+}
+%auto {
+  margin: 0 auto;
+  width: 70%;
+}
+
+header,
+main,
+.footer-container1 {
+  @extend %auto;
+}
+.btn-style {
+  padding: 12px 27px;
+  border-radius: 50px;
+  background-color: $Bright-red;
+  border: none;
+}
+.btn {
+  cursor: pointer;
+  box-shadow: -1px 8px 20px hsl(12, 77.91%, 72.16%);
+
+  @extend .btn-style;
+  &:hover {
+    background-color: hsl(12deg 77.91% 72.16%);
+  }
+}
+.btn1 {
+  @extend .btn-style;
+  background-color: $Very-Light-Gray;
+}
+.btn,
+.btn {
+  color: $Very-Pale-Red;
+}
+.btn1 {
+  color: $Bright-red;
+  font-weight: 600;
+  &:hover {
+    color: hsl(12deg 77.91% 72.16%);
+  }
+}
+
+#absolute1 {
+  z-index: -1;
+  position: absolute;
+  height: 700px;
+  width: 701px;
+  top: -11%;
+  left: 64%;
+}
+#absolute2 {
+  z-index: -1;
+  position: absolute;
+  height: 615px;
+  width: 615px;
+  top: 117%;
+  left: -26%;
+}
+section .section2-container::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  background: url(../images/bg-tablet-pattern.svg) center / cover;
+  filter: brightness(0) saturate(100%) invert(52%) sepia(81%) saturate(2136%)
+    hue-rotate(333deg) brightness(100%) contrast(91%);
+  height: 375px;
+  width: 500px;
+  z-index: 3;
+}
+section .section2-container::after {
+  content: "";
+  position: absolute;
+  width: 253px;
+  height: 144px;
+  background-color: rgb(243, 106, 72);
+  border-top-left-radius: 152px;
+  border-top-right-radius: 80px;
+  border: 10px solid rgb(243, 106, 72);
+  top: 0%;
+  left: 88%;
+  transform: rotateX(178deg);
+  z-index: 1;
+}

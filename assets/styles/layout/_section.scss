@@ -1,0 +1,129 @@
+section {
+  position: relative;
+  h4 {
+    text-align: center;
+    font-size: 3rem;
+  }
+  .section1-container {
+    @include Spacebetween;
+    margin: 91px 0;
+    gap: 30px;
+  }
+  .People {
+    background-color: rgb(243 243 243 / 86%);
+    padding: 50px 70px;
+    text-align: center;
+    position: relative;
+  }
+  .People img {
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    z-index: 2;
+  }
+  h5 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  .slider {
+    @include Spacebetween;
+    justify-content: center;
+    padding: 20px 0 35px 0;
+  }
+  .trier {
+    width: 10%;
+    @include Spacebetween;
+    min-width: 92px;
+  }
+
+  .circle1 {
+    display: none;
+    height: 12px;
+    width: 12px;
+    border: 2px solid $Bright-red;
+    background: transparent;
+    border-radius: 36px;
+  }
+  .CircleStyle {
+    background-color: red;
+  }
+
+  .btn {
+    margin: 0 auto;
+    display: flex;
+    padding: 20px 70px;
+  }
+  .bg-orange {
+    background-color: $Bright-red;
+    padding: 53px 0px;
+    display: flex;
+    margin-top: 50px;
+    position: relative;
+  }
+
+  .section2-container {
+    @include Spacebetween;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+
+    h6 {
+      font-size: 2.5rem;
+      color: $Very-Light-Gray;
+      z-index: 3;
+    }
+    button {
+      padding: 15px 45px;
+      z-index: 2;
+    }
+  }
+  @media screen and (max-width: 1800px) {
+    .People p br {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 1123px) {
+    .People {
+      padding: 50px 24px;
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  section .section1-container {
+    margin: 150px 0 0 0;
+  }
+  section .circle1 {
+    display: block;
+  }
+}
+@media screen and (max-width: 750px) {
+  section .section1-container {
+    margin: 80px auto 15px;
+    width: 80%;
+  }
+  section .section1-container .People:nth-child(1),
+  section .section1-container .People:nth-child(3),
+  section .section2-container::before {
+    display: none;
+  }
+  section h4 {
+    font-size: 2rem;
+  }
+  section .section2-container {
+    display: block;
+    text-align: center;
+  }
+  section .section2-container h6 {
+    margin-bottom: 17px;
+    position: relative;
+    font-size: 2.2rem;
+  }
+  section .section2-container::after {
+    transform: rotate(111deg);
+    left: -143px;
+    top: 26%;
+  }
+}
