@@ -69,7 +69,8 @@ header {
   .footer-container1 {
     width: 80% !important;
   }
-  header .header-1 p br {
+  header .header-1 p br,
+  header .header-1 h1 br {
     display: none;
   }
 }

@@ -47,7 +47,8 @@ main {
   main .main-1 h2 {
     font-size: 2.6rem;
   }
-  .flex p br {
+  .flex p br,
+  main p br {
     display: none;
   }
 }

@@ -1,7 +1,9 @@
 const NavUl = document.querySelector("nav ul");
-const NavLi = document.querySelectorAll("nav ul li");
 
+const NavLi = document.querySelectorAll("nav ul li");
 const Hamburger = document.getElementById("hamburger");
+const Cercles = document.querySelectorAll(".circle1");
+const ChangementImg = document.querySelector(".img2 ");
 
 Hamburger.addEventListener("click", () => {
   NavUl.classList.toggle("NavUl");
@@ -11,14 +13,14 @@ Hamburger.addEventListener("click", () => {
   });
 });
 
-const Cercles = document.querySelectorAll(".circle1");
-
 let count = -1;
 let count2 = -1;
 console.log(Cercles);
-function apres(nimber) {
+function apres(number) {
   setTimeout(() => {
-    Cercles[nimber].classList.remove("CircleStyle");
+    Cercles[number].classList.remove("CircleStyle");
+
+    ChangementImg.innerHTML = `   <img src="./assets/images/avatar-${number}.png" alt="avatar-Ali" id="img2" />`;
   }, 2000);
 }
 setInterval(() => {
